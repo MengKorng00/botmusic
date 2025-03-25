@@ -198,13 +198,13 @@ HTML_TEMPLATE = """
           A fast, feature-rich music bot for Discord with instant response buttons.
         </p>
         <div className="flex justify-center space-x-4 mb-6">
-          <a href="https://discord.com/oauth2/authorize?client_id=c251e091725f15ee6bf1120be090ecf2f1f1eea8d4bf442e98d744a4f6178394&permissions=8&scope=bot" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.com/oauth2/authorize?client_id=1343179814206570599&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer">
             <Button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl flex items-center space-x-2">
               <FaPlay />
               <span>Invite Bot</span>
             </Button>
           </a>
-          <a href="https://discord.gg/39AZkdAw" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.gg/pRBhdWVw" target="_blank" rel="noopener noreferrer">
             <Button className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl flex items-center space-x-2">
               <FaDiscord />
               <span>Join Discord Server</span>
@@ -257,6 +257,8 @@ HTML_TEMPLATE = """
 </body>
 </html>
 """
+
+
 @app.route('/')
 def home():
     return render_template_string(HTML_TEMPLATE)
@@ -269,7 +271,7 @@ def run_web():
 @bot.command()
 async def _khb(ctx):
     """Send bot invite link."""
-    await ctx.send("Invite the bot here: https://discord.com/oauth2/authorize?client_id=1343418597384523909")
+    await ctx.send("Invite the bot here: https://discord.com/oauth2/authorize?client_id=1343179814206570599&permissions=8&integration_type=0&scope=bot")
 
 if __name__ == '__main__':
     # Start the Flask website in a separate daemon thread.
@@ -278,4 +280,4 @@ if __name__ == '__main__':
     web_thread.start()
 
     # Run the Discord bot.
-    bot.run("MTM0MzE3OTgxNDIwNjU3MDU5OQ.GlVZjn.ksl-webGHq9Qtqt4mVQOEzQAFNHopUBabaH8qI")
+    bot.run("MTM0MzE3OTgxNDIwNjU3MDU5OQ.GaNHlR.6PHB_sUAVprrOu-Kvodpyur-RfZ4WoX3SjHUoQ")
